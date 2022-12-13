@@ -1,7 +1,7 @@
 .logo-container {
   z-index: 0;
-  width: 400px;
-  height: 609px;
+  width: 500px;
+  height: 700px;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -14,7 +14,7 @@
     width: 100%;
     height: auto;
     bottom: 0;
-    transform: rotateZ(30deg) !important;
+    // transform: rotateZ(30deg) !important;
   }
 
   .solid-logo {
@@ -26,7 +26,7 @@
     margin: auto;
     width: 100%;
     opacity: 0;
-    transform: rotateZ(30deg) !important;
+    //transform: rotateZ(30deg) !important;
     z-index: 1;
   }
 }
@@ -34,4 +34,34 @@
 .svg-container {
   stroke: #ffd700;
   stroke-width: 10;
+}
+
+.path {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: dash 3s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1728.193298;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.path2 {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: dash2 3s linear alternate infinite;
+}
+
+@keyframes dash2 {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1728.193298;
+  }
 }

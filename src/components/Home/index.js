@@ -9,11 +9,14 @@ import './index.scss'
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const nameArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n']
+  const styleObj = {
+    fontSize: 60,
+  }
+
+  const nameArray = ['a', 'l', 'i', 'd', '', 'c', 'j']
   const jobArray = [
-    'w',
-    'e',
-    'b',
+    'd',
+    'a',
     ' ',
     'd',
     'e',
@@ -37,7 +40,7 @@ const Home = () => {
     <>
       <div className="container home-page">
         <div className="text-zone">
-          <h1>
+          <h1 style={styleObj}>
             <span className={letterClass}>H</span>
             <span className={`${letterClass} _12`}>i,</span>
             <br />
@@ -45,6 +48,7 @@ const Home = () => {
             <span className={`${letterClass} _14`}>'m</span>
             <img
               src={LogoTitle}
+              style={{ width: 50, height: 50 }}
               alt="JavaScript Developer Name, Web Developer Name"
             />
             <AnimatedLetters
@@ -59,7 +63,7 @@ const Home = () => {
               idx={22}
             />
           </h1>
-          <h2>Front End Developer / JavaScript Expert / Youtuber</h2>
+          <h2>Full Stack Developer / Blockend / Freelancer</h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
