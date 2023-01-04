@@ -5,6 +5,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import LogoTitle from '../../assets/images/logo-s.png'
 import Logo from './Logo'
 import './index.scss'
+import StarfieldAnimation from 'react-starfield-animation'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -13,7 +14,7 @@ const Home = () => {
     fontSize: 60,
   }
 
-  const nameArray = ['a', 'l', 'i', 'd', '', 'c', 'j']
+  const nameArray = ['a', 'l', 'i', 'd', '', 'M', 'e', 'm', 'o', 'n']
   const jobArray = [
     'd',
     'a',
@@ -39,6 +40,15 @@ const Home = () => {
   return (
     <>
       <div className="container home-page">
+        <StarfieldAnimation
+          style={{
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            overflow: 'hidden',
+            zIndex: -2,
+          }}
+        />
         <div className="text-zone">
           <h1 style={styleObj}>
             <span className={letterClass}>H</span>

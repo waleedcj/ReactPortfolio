@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+//require('dotenv').config()
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -20,7 +21,12 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
       .then(
         () => {
           alert('Message successfully sent!')
@@ -43,7 +49,7 @@ const Contact = () => {
               idx={15}
             />
           </h1>
-          <p>
+          <p align="LEFT" style={{ fontSize: '16px' }}>
             I am interested in freelance opportunities - especially on ambitious
             or large projects. However, if you have any other requests or
             questions, don't hesitate to contact me using below form either.

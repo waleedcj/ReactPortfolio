@@ -4,12 +4,21 @@ import * as THREE from 'three'
 import { useRef, useState, useMemo, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Text, TrackballControls } from '@react-three/drei'
-import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Stars from '../Stars'
+import alertify from 'alertifyjs'
+import 'alertifyjs/build/css/alertify.css'
+import { useMediaQuery } from 'react-responsive'
 
 const Skills = () => {
+  useEffect(() => {
+    alertify.notify('Scroll to Zoom In & Out', '', 5)
+  }, [])
+
+  const isMobile = useMediaQuery({
+    query: '(max-width: 1200px)',
+  })
+
   const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {
@@ -96,43 +105,6 @@ const Skills = () => {
       <Word key={index} position={pos} children={word} />
     ))
   }
-  // useEffect(() => {
-  //   return () => {
-  //     const container = '.tagcloud'
-  //     const texts = [
-  //       '3D',
-  //       'TagCloud',
-  //       'JavaScript',
-  //       'CSS3',
-  //       'Animation',
-  //       'Interactive',
-  //       'Mouse',
-  //       'Rolling',
-  //       'Sphere',
-  //       '6KB',
-  //       'v2.x',
-  //     ]
-  //     const options = {
-  //       // radius in px
-  //       radius: 400,
-
-  //       // animation speed
-  //       // slow, normal, fast
-  //       maxSpeed: 'fast',
-  //       initSpeed: 'fast',
-
-  //       // 0 = top
-  //       // 90 = left
-  //       // 135 = right-bottom
-  //       direction: 135,
-
-  //       // interact with cursor move on mouse out
-  //       keep: true,
-  //     }
-
-  //     TagCloud(container, texts, options)
-  //   }
-  // }, [])
 
   return (
     <div className="container about-page">
@@ -145,42 +117,88 @@ const Skills = () => {
           />
         </h1>
         <p style={{ fontSize: '16px' }}>
-          I'm a very ambitious front-end developer looking for a role in an
-          established IT company with the opportunity to work with the latest
-          technologies on challenging and diverse projects.
+          Still a junior but I call myself a full-stack developer, at the
+          momment leaning more towards front-end development including
+          technologies like{' '}
+          <span className="tech-tag">
+            {' '}
+            HTML5, CSS, SCSS, JavaScript, React, TypeScript, Bootstrap, Git
+          </span>{' '}
+          etc. Some of the Backend technologies I have worked with are{' '}
+          <span className="tech-tag">
+            Solidity, NodeJs, C#, Django, java, robotC
+          </span>
         </p>
         <p align="LEFT" style={{ fontSize: '16px' }}>
-          I'm quiet confident, naturally curious, and perpetually working on
-          improving my chops one design problem at a time.
+          I am not a designer but I have a good sense of aesthetics, and
+          experience in responsive web design. I have an ability to quickly pick
+          up things and start working on stuff. Moreover, I love contributing to
+          open source projects & support also after a projects completion. I
+          guarantee a commitment during a project or routine work.
         </p>
         <p style={{ fontSize: '16px' }}>
-          If I need to define myself in one sentence that would be a family
-          person, father of a beautiful daughter, a sports fanatic, photography
-          enthusiast, and tech-obsessed!!!
+          Vist my Linkedln{' '}
+          <a
+            className="tech-tag2"
+            href="https://www.linkedin.com/in/waleed-zulfiqar-ali-886579181/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            profile
+          </a>{' '}
+          for more details, or you could also checkout my resume right{' '}
+          <a
+            className="tech-tag2"
+            href="/walidResume1page.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </a>
+          .
         </p>
       </div>
 
       {/* */}
 
-      <Canvas
-        dpr={[1, 2]}
-        camera={{ position: [0, 0, 35], fov: 90 }}
-        style={{
-          width: '50%',
-          height: '100%',
-          top: '0%',
-          paddingTop: '0%',
-          marginLeft: 0,
-          position: 'absolute',
-          right: 0,
-          overflow: 'hidden',
-        }}
-      >
-        <fog attach="fog" args={['#202025', 0, 90]} />
-        <Cloud count={14} radius={20} />
-        <TrackballControls />
-      </Canvas>
+      {isMobile ? (
+        <Canvas
+          dpr={[1, 2]}
+          camera={{ position: [0, 0, 35], fov: 90 }}
+          style={{
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            overflow: 'hidden',
+          }}
+        >
+          <fog attach="fog" args={['#202025', 0, 90]} />
+          <Cloud count={14} radius={20} />
+          <TrackballControls />
+        </Canvas>
+      ) : (
+        <Canvas
+          dpr={[1, 2]}
+          camera={{ position: [0, 0, 35], fov: 90 }}
+          style={{
+            width: '50%',
+            height: '100%',
+            top: '0%',
+            paddingTop: '0%',
+            marginLeft: 0,
+            position: 'absolute',
+            right: 0,
+            overflow: 'hidden',
+          }}
+        >
+          <fog attach="fog" args={['#202025', 0, 90]} />
+          <Cloud count={14} radius={20} />
+          <TrackballControls />
+        </Canvas>
+      )}
+
       <Stars />
+      {}
     </div>
   )
 }
