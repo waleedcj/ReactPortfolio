@@ -37,9 +37,17 @@ const About = () => {
             />
           </h1>
           <p style={{ fontSize: '16px' }}>
-            I'm a very young ambitious Full Stack developer looking for a role
-            in an established IT company with the opportunity to work with the
-            latest technologies on challenging and diverse projects.
+            <p style={{ fontSize: '16px' }}>
+              As an ambitious and seasoned full-stack developer, I actively seek
+              opportunities to leverage my skills in challenging and diverse
+              projects. My experience as a engineer allows me to adeptly
+              navigate the latest technologies, and I'm particularly interested
+              in collaborating with startups that share my passion for
+              technological innovation. I approach each opportunity with
+              enthusiasm and a commitment to delivering high-quality solutions.
+              Open to opportunities, I excel in communication and collaboration,
+              ensuring every project's success.
+            </p>
           </p>
           <p align="LEFT" style={{ fontSize: '16px' }}>
             I'm quiet confident, naturally curious, and perpetually working on

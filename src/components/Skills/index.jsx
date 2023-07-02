@@ -29,6 +29,7 @@ const Skills = () => {
 
   const wordss = [
     'React',
+    'React Native',
     'TypeScript',
     'Git',
     'SCSS/CSS',
@@ -39,7 +40,7 @@ const Skills = () => {
     'npm/Yarn',
     'JavaScript',
     'PostgreSQL',
-    'JSON',
+    'POSTMAN',
   ]
 
   function Word({ children, ...props }) {
@@ -117,25 +118,28 @@ const Skills = () => {
           />
         </h1>
         <p style={{ fontSize: '16px' }}>
-          Still a junior but I call myself a full-stack developer, at the
-          momment leaning more towards front-end development including
-          technologies like{' '}
+          I am a software engineer with a focus on full-stack development. I
+          specialize in using front-end technologies such as
           <span className="tech-tag">
-            {' '}
-            HTML5, CSS, SCSS, JavaScript, React, TypeScript, Bootstrap, Git
-          </span>{' '}
-          etc. Some of the Backend technologies I have worked with are{' '}
-          <span className="tech-tag">
-            Solidity, NodeJs, C#, Django, java, robotC
+            HTML5, CSS, SCSS, JavaScript, React, TypeScript, React Native,
+            Bootstrap, Git
           </span>
+          , and so on. On the back-end, I am proficient in
+          <span className="tech-tag">
+            React Native, React, Solidity, NodeJs, Django and wordpress
+          </span>
+          .
         </p>
         <p align="LEFT" style={{ fontSize: '16px' }}>
-          I am not a designer but I have a good sense of aesthetics, and
-          experience in responsive web design. I have an ability to quickly pick
-          up things and start working on stuff. Moreover, I love contributing to
-          open source projects & support also after a projects completion. I
-          guarantee a commitment during a project or routine work.
+          Though not a designer, I possess a keen sense of aesthetics and have
+          extensive experience in creating responsive web designs. I have the
+          ability to quickly learn and adapt to new technologies and
+          environments. I enjoy contributing to open-source projects and am
+          committed to providing ongoing support after the project's completion.
+          My commitment to each project, routine work, or learning new
+          technology is unwavering.
         </p>
+
         <p style={{ fontSize: '16px' }}>
           Vist my Linkedln{' '}
           <a
