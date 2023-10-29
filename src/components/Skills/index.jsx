@@ -118,19 +118,24 @@ const Skills = () => {
           />
         </h1>
         <p style={{ fontSize: '16px' }}>
-          I am a software engineer with a focus on full-stack development. I
-          specialize in using front-end technologies such as
+          Software engineer with expertise in Blockchain App & Web development.
+        </p>
+        <p style={{ fontSize: '16px' }}>
+          Tech I know:{' '}
           <span className="tech-tag">
-            HTML5, CSS, SCSS, JavaScript, React, TypeScript, React Native,
-            Bootstrap, Git
+            Typescript | Python | Solidity | wordpress
           </span>
-          , and so on. On the back-end, I am proficient in
-          <span className="tech-tag">
-            React Native, React, Solidity, NodeJs, Django and wordpress
-          </span>
-          .
         </p>
         <p align="LEFT" style={{ fontSize: '16px' }}>
+          <ul>
+            <li>React Native</li>
+            <li>NextJs, ReactJs, ViteJs, GatsbyJs, Bootstrap </li>
+            <li>NodeJs, ExpressJs, Django, Postgres</li>
+            <li>Blockchain, BSC , Ethereum</li>
+            <li>wordpress, WebFlow</li>
+            <li>CSS, Tailwind</li>
+            <li>Unity</li>
+          </ul>
           Though not a designer, I possess a keen sense of aesthetics and have
           extensive experience in creating responsive web designs. I have the
           ability to quickly learn and adapt to new technologies and

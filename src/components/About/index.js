@@ -37,26 +37,18 @@ const About = () => {
             />
           </h1>
           <p style={{ fontSize: '16px' }}>
-            <p style={{ fontSize: '16px' }}>
-              As an ambitious and seasoned full-stack developer, I actively seek
-              opportunities to leverage my skills in challenging and diverse
-              projects. My experience as a engineer allows me to adeptly
-              navigate the latest technologies, and I'm particularly interested
-              in collaborating with startups that share my passion for
-              technological innovation. I approach each opportunity with
-              enthusiasm and a commitment to delivering high-quality solutions.
-              Open to opportunities, I excel in communication and collaboration,
-              ensuring every project's success.
-            </p>
+            Hey there! I'm a full-stack developer who loves to dive headfirst
+            into exciting projects. But beyond the code, there's more to me. I'm
+            that person who's always up for a good laugh, can't resist a sports
+            match, and might just challenge you to a video game duel.
           </p>
           <p align="LEFT" style={{ fontSize: '16px' }}>
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            If I had to sum myself up in a few words? Think of me as your techy
+            buddy who's always game for a new challenge, loves to learn, and is
+            a bit obsessed with building cool stuff.
           </p>
           <p style={{ fontSize: '16px' }}>
-            If I need to define myself in one sentence that would be a funny
-            person, a sports fanatic, gamming and building enthusiast, learner
-            and tech-obsessed!!!
+            Ready to team up and create something awesome? Let's chat!
           </p>
         </div>
 
